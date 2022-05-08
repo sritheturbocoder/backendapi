@@ -5,14 +5,14 @@ use std::net::TcpListener;
 #[derive(serde::Deserialize)]
 struct BookFormData {
     email: String,
-    name: String
+    name: String,
 }
 
 async fn health_check() -> HttpResponse {
     HttpResponse::Ok().finish()
 }
 
-async fn book_subscriptions(_form : web::Form<BookFormData>) -> HttpResponse {
+async fn book_subscriptions(_form: web::Form<BookFormData>) -> HttpResponse {
     HttpResponse::Ok().finish()
 }
 
